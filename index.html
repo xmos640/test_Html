@@ -12,7 +12,7 @@
     margin: 0;
    }
 </style>
-<body class="bg-fuchsia-200">
+<body class="bg-fuchsia-100">
 
   <!---------------------------------------------------- Header ------------------------------------------------------------>
 
@@ -28,18 +28,20 @@
           <button class="flex ml-auto items-center md:hidden border-0  px-3 focus:outline-none hover:bg-fuchsia-700 rounded text-base md:mt-0 yo">Button
           </button>
          </div>
-         <nav class="md:ml-auto md:w-fit w-1/2 md:translate-y-0 translate-y-12 md:translate-x-0 translate-x-1/2 md:flex md:static absolute md:bg-inherit bg-fuchsia-900 flex flex-col flex-wrap md:flex-row  md:mt-0 mt-4 nav hidden text-base md:divide-none divide-y divide-black " >
-          <a class="md:mr-5 hover:text-fuchsia-50 p-2"href="#">First Link</a>
-          <a class="md:mr-5 hover:text-fuchsia-50 p-2"href="#">Second Link</a>
-          <a class="md:mr-5 hover:text-fuchsia-50 p-2"href="#">Third Link</a>
-          <a class="md:mr-5 hover:text-fuchsia-50 p-2"href="#">Fourth Link</a>
+         <div class="md:ml-auto md:w-fit w-1/2 md:translate-y-0 translate-y-12 md:translate-x-0 translate-x-1/2 md:static absolute ">
+         <nav class=" md:bg-inherit bg-fuchsia-900 flex flex-col flex-wrap md:flex-row md:opacity-100 opacity-0 md:mt-0 mt-4 nav text-base md:divide-none divide-y divide-black transition ease-in-out delay-150 duration-700" >
+          <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">First Link</a>
+          <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">Second Link</a>
+          <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">Third Link</a>
+          <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">Fourth Link</a>
         </nav>
+        </div>
         </div>
       </header>
 
      <!---------------------------------------------------- Hero  ------------------------------------------------------------>
 
-      <section class="text-gray-600 body-font" style="height: 90vh;background-image: linear-gradient(0deg, rgb(245 208 254) 0%, rgba(82, 22, 71, 0.537) 60%), url(https://source.unsplash.com/random/?shoes);
+      <section class="text-gray-600 body-font" style="height: 90vh;background-image: linear-gradient(0deg, rgb(250 232 255) 0%, rgba(82, 22, 71, 0.537) 60%), url(https://source.unsplash.com/random/?shoes);
       background-size: cover;
       background-position: center;">
         <div class="w-full h-full flex items-center justify-center flex-col">
@@ -145,7 +147,7 @@
 
       <!---------------------------------------------------- Footer ------------------------------------------------------------>
 
-      <footer class="text-gray-600 bg-fuchsia-300 body-font">
+      <footer class="text-gray-600 bg-fuchsia-200 body-font">
         <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -274,9 +276,9 @@ const nav=document.querySelector(".nav")
 yo.addEventListener('click',(e)=>{
   shown=!shown;
   if(shown===false){
-   nav.classList.add("hidden"); 
+   nav.classList.add("opacity-0"); 
   }else{
-  nav.classList.remove("hidden");}
+  nav.classList.remove("opacity-0");}
 
 });
 </script>
