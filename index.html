@@ -12,7 +12,7 @@
     margin: 0;
    }
 </style>
-<body class="bg-fuchsia-100">
+<body class="bg-fuchsia-100 overflow-hidden">
 
   <!---------------------------------------------------- Header ------------------------------------------------------------>
 
@@ -29,7 +29,7 @@
           </button>
          </div>
          <div class="md:ml-auto md:w-fit w-1/2 md:translate-y-0 translate-y-12 md:translate-x-0 translate-x-1/2 md:static absolute ">
-         <nav class=" md:bg-inherit bg-fuchsia-900 flex flex-col flex-wrap md:flex-row md:opacity-100 opacity-0 md:mt-0 mt-4 nav text-base md:divide-none divide-y divide-black transition ease-linear delay-200 duration-500" >
+         <nav class=" md:bg-inherit bg-fuchsia-900 flex flex-col md:translate-x-0 translate-x-full flex-wrap md:flex-row md:opacity-100  md:mt-0 mt-4 nav text-base md:divide-none divide-y divide-black transition ease-linear delay-200 duration-500" >
           <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">First Link</a>
           <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">Second Link</a>
           <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">Third Link</a>
@@ -275,10 +275,10 @@ const nav=document.querySelector(".nav")
 
 yo.addEventListener('click',(e)=>{
   shown=!shown;
-  if(shown===false){
-   nav.classList.add("opacity-0"); 
+  if(shown===true){
+   nav.classList.remove("translate-x-0"); 
   }else{
-  nav.classList.remove("opacity-0");}
+  nav.classList.add("translate-x-0");}
 
 });
 </script>
