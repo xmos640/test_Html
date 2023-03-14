@@ -16,9 +16,9 @@
 
   <!---------------------------------------------------- Header ------------------------------------------------------------>
 
-    <header class="text-fuchsia-200 bg-fuchsia-900 body-font z-20 flex flex-nowrap flex-row overflow-hidden">
+    <header class="text-fuchsia-200 bg-fuchsia-900 body-font flex flex-nowrap flex-row overflow-hidden">
         <div class="w-full flex flex-wrap  flex-col md:flex-row items-center">
-         <div class="md:w-40 w-full z-10 p-3 flex flex-nowrap ">
+         <div class="md:w-40 w-full p-3 flex flex-nowrap ">
           <a class="flex title-font font-medium items-center text-fuchsia-100 ml-1 md:mb-0" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -28,8 +28,8 @@
           <button class="flex ml-auto items-center md:hidden border-0  px-3 focus:outline-none hover:bg-fuchsia-700 rounded text-base md:mt-0 yo">Button
           </button>
          </div>
-         <div class="md:ml-auto md:w-fit w-1/2 md:translate-y-0 translate-y-12 md:translate-x-0 translate-x-1/2 md:static absolute ">
-         <nav class=" md:bg-inherit bg-fuchsia-900 flex flex-col md:translate-y-0 -translate-y-64 md:static relative z-0 flex-wrap md:flex-row md:opacity-100  md:mt-0 mt-4 nav text-base md:divide-none divide-y divide-black transition ease-linear delay-200 duration-500" >
+         <div class="md:ml-auto md:w-fit w-1/2 md:translate-y-0 translate-y-1/4 md:translate-x-0 translate-x-1/2 md:static absolute overflow-x-hidden">
+         <nav class=" md:bg-inherit bg-fuchsia-900 flex flex-col md:translate-x-0 translate-x-full md:static relative flex-wrap md:flex-row md:opacity-100  md:mt-0 mt-4 nav text-base md:divide-none divide-y divide-black transition ease-linear delay-200 duration-500 overflow-hidden" >
           <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">First Link</a>
           <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">Second Link</a>
           <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">Third Link</a>
@@ -276,9 +276,9 @@ const nav=document.querySelector(".nav")
 yo.addEventListener('click',(e)=>{
   shown=!shown;
   if(shown===true){
-   nav.classList.remove("-translate-y-64"); 
+   nav.classList.remove("translate-x-full");
   }else{
-  nav.classList.add("-translate-y-64");}
+  nav.classList.add("translate-x-full");}
 
 });
 </script>
