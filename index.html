@@ -28,8 +28,10 @@
           <button class="flex ml-auto items-center md:hidden border-0  px-3 focus:outline-none hover:bg-fuchsia-700 rounded text-base md:mt-0 yo">Button
           </button>
          </div>
-         <div class="md:ml-auto md:w-fit w-1/2 md:translate-y-0 translate-y-1/4 md:translate-x-0 translate-x-1/2 md:static absolute overflow-x-hidden">
-         <nav class=" md:bg-inherit bg-fuchsia-900 flex flex-col md:translate-x-0 translate-x-full md:static relative flex-wrap md:flex-row md:opacity-100  md:mt-0 mt-4 nav text-base md:divide-none divide-y divide-black transition ease-linear delay-200 duration-500 overflow-hidden" >
+         <div class="md:ml-auto md:w-fit w-1/2 md:translate-x-0 translate-x-1/2 md:static fixed overflow-x-hidden md:h-fit h-screen md:visible invisible"id="sidebar">
+          <nav class=" md:bg-inherit bg-fuchsia-700 flex flex-col md:translate-x-0 translate-x-full flex-wrap md:flex-row md:opacity-100  md:mt-0 nav text-base md:divide-none divide-y divide-black transition ease-linear  duration-300 overflow-hidden md:h-fit h-full">
+            <button class="flex ml-auto items-center md:hidden border-0 focus:outline-none hover:bg-fuchsia-700 rounded close p-2">Button
+            </button>
           <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">First Link</a>
           <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">Second Link</a>
           <a class="md:mr-5 hover:text-white p-2 transition ease-out delay-150 duration-500"href="#">Third Link</a>
@@ -269,17 +271,17 @@
 <!-- JavaScript -->
 
 <script>
-const yo= document.querySelector(".yo");
-let shown=false;
-const nav=document.querySelector(".nav")
-
-yo.addEventListener('click',(e)=>{
-  shown=!shown;
-  if(shown===true){
-   nav.classList.remove("translate-x-full");
-  }else{
-  nav.classList.add("translate-x-full");}
-
-});
-</script>
+  const menu= document.querySelector(".menu");
+  const close=document.querySelector(".close");
+  const nav=document.querySelector(".nav");
+  const sidebar=document.querySelector("#sidebar")
+  
+  menu.addEventListener('click',(e)=>{
+     nav.classList.remove("translate-x-full");
+     sidebar.classList.remove("invisible")
+  });
+  close.addEventListener('click',(e)=>{
+    nav.classList.add("translate-x-full");
+    sidebar.classList.add("invisible")});
+  </script>
 </html>
